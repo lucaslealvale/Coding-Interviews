@@ -1,0 +1,32 @@
+intersection
+Given two linked lists, determine if the two lists intersect. Return the intersection node.
+Intersection: the intersection of two linked lists is based on reference, not value.
+In other words, even if two lists have nodes with the same value, that doesn't mean they intersect.
+
+problema de interseccao
+dado duas linked lists, determine se as duas listas intersectao e retorne o nó de interseccao
+interseccao de duas linked lists é definido no problema como baseada em referencia, nao em valor.
+em outras palavras, mesmo se duas listas tiverem nós de mesmo valor, nao significa que  ela intersectao.
+
+add info
+    -  The lists are singly linked, i.e. there is no pointer to the previous node.
+    -  as listas sao singularmente ligadas, significando que nao existe ponteiro para o nó anterior
+Hints
+    - Examples are useful. Draw two linked lists with an intersection and two equivalent lists that don't intersect;
+    - exemplos sao uteis. Desenhe duas linked lists com uma interseccao e duas listas equivalentes que nao se intersecctao.
+
+    - Start by checking if there is an intersection before looking for the exact place it occurs;
+    - comece checando se existe uma interseccao antes de procurar pro local exato que ela ocorre
+
+    - Note that if two lists intersect, they will always share the last node. Once they intersect, all following nodes are shared;
+    - perceba que se duas listas se intersectao, elas vao sempre dividir o ultimo nó. Uma vez que se intersectarem todos seguintes nós sao compartilhados.
+
+    - After you have determined that the two lists intersect, you have to find the intersection node. If the two lists had the exact same length, how would you solve the problem?
+    - Apos vc determinar que as duas listas se intesectao, vc encontrou o nó de interseccao. Se ambas listas tem o mesmo comprimento como vc resolveria o problema
+
+    - If the two lists had the same length, you could traverse them in parallel until you find a shared node. Now, how can you adapt this idea to lists with different lengths?
+    - se as duas listas tivessem o mesmo comprimento, vc poderia transladar elas em paralelo ate encontrar o nó compartilhado. Agora , como vc adapta essa ideia para listas com comprimentos diferentes?
+
+    - Is the length difference useful for anything?
+      o comprimento é util pra algo?
+
