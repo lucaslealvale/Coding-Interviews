@@ -22,8 +22,8 @@ class Stack:
 class StackWithMin(Stack):
    # Create whatever methods you need
     def __init__(self):
+        super().__init__()
         self.min = []
-        self._items = []
         
     def push(self, value):
         if(len(self.min) == 0):
@@ -31,12 +31,13 @@ class StackWithMin(Stack):
         elif(self.min[-1]>=value):
             self.min.append(value)
 
-        self._items.append(value)
+        super().push(value)
 
     def pop(self):
-        if(self._items[-1] == self.min[-1]):
+        popi = super().pop()
+        if(popi == self.min[-1]):
             self.min.pop()
-        return self._items.pop()
+        return popi
 
     def minimum(self):
         # You must implement at least this method
