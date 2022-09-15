@@ -3,13 +3,10 @@ def print_indices_and_elements(elements) -> None:
         print(count,element)
 
 def get_even_numbers_between(start: int, end: int) -> list[int]:
-    #newlist = [expression for item in iterable if condition == True]
-    #andrew this wrong?
     return [x for x in list(range(start,end+1)) if x % 2 == False]
 
 
 def get_char_set_from(s: str) -> set[str]:
-    #this test is failing
     return {l for l in s}
 
 
@@ -25,7 +22,6 @@ def get_number_or_minus_one(n: int) -> int:
     return n if n % 2 == 0 else -1
 
 def transform_multiples_of_5(numbers: list[int]) -> list[int]:
-    # a list comprehension that returns a list of numbers that are multiples of 5
     return [-1 if x%2==1 else x for x in numbers if x%5==0]
 
 def str_lengths(strings: list[str]) -> list[int]:
