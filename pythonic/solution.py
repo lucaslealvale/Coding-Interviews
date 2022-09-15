@@ -25,7 +25,7 @@ def transform_multiples_of_5(numbers: list[int]) -> list[int]:
     return [-1 if x%2==1 else x for x in numbers if x%5==0]
 
 def str_lengths(strings: list[str]) -> list[int]:
-    return []
+    return [len(i) for i in strings]
 
 def get_fibonacci_type(version: int) -> str:
     return ''
