@@ -10,7 +10,7 @@ def get_even_numbers_between(start: int, end: int) -> list[int]:
 
 def get_char_set_from(s: str) -> set[str]:
     #this test is failing
-    return set(l for l in s)
+    return {l for l in s}
 
 
 def get_perfect_squares_between(start: int, end: int) -> dict[int,int]:
@@ -24,19 +24,15 @@ def filter_even_from(numbers: list[int]) -> list[int]:
 def get_number_or_minus_one(n: int) -> int:
     return n if n % 2 == 0 else -1
 
-
 def transform_multiples_of_5(numbers: list[int]) -> list[int]:
-    return [n for n in numbers if n % 2 and n % 5 == 1]
-
-
+    # a list comprehension that returns a list of numbers that are multiples of 5
+    return [-1 if x%2==1 else x for x in numbers if x%5==0]
 
 def str_lengths(strings: list[str]) -> list[int]:
     return []
 
-
 def get_fibonacci_type(version: int) -> str:
     return ''
-
 
 def difference_between_fibonacci1_and_fibonacci2() -> str:
     return ''
