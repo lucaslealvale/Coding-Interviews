@@ -135,7 +135,7 @@ def assert_get_char_set_works():
     for c in s:
         expected.add(c)
     assert expected == char_set, f'get_char_set returned the wrong set. Expected: {expected}. Got: {char_set}.'
-    #assert uses_set_comp(solution.get_char_set_from), 'get_char_set should be implemented using a set comprehension.'
+    assert uses_set_comp(solution.get_char_set_from), 'get_char_set should be implemented using a set comprehension.'
 
 
 def assert_get_perfect_squares_works():
