@@ -52,34 +52,121 @@ class Graph:
 # Implement the functions below
 
 def pre_order_recursive(root: TreeNode) -> None:
+    
+    if root == None:
+        return
+    
+    print(root.value)
+    
+    pre_order_recursive(root.left)
+
+    pre_order_recursive(root.right)
+
     pass
 
 
 def pre_order_iterative(root: TreeNode) -> None:
-    pass
+    
+    lista = []
+    lista.append(root)
+
+    while(len(lista)>0):
+        
+        root = lista.pop()
+        
+        print(root.value)
+        
+        if root.right:
+            lista.append(root.right)
+        
+        if root.left:
+            lista.append(root.left)
 
 
 def in_order_recursive(root: TreeNode) -> None:
-    pass
+
+    if root == None:
+        return
+    
+    in_order_recursive(root.left)
+
+    print(root.value)
+    
+    in_order_recursive(root.right)
 
 
 def post_order_recursive(root: TreeNode) -> None:
-    pass
+   
+    if root == None:
+        return
 
+    post_order_recursive(root.left)
+    
+    post_order_recursive(root.right)
+    
+    print(root.value)
 
 def breadth_first(root: TreeNode) -> None:
-    pass
+    
+    already_visited = []
+    already_visited.append(root)
+
+    while already_visited:
+        node = already_visited.pop(0)
+        
+        print(node.value)
+
+        if node.left != None:
+            already_visited.append(node.left)
+            
+        if node.right != None:
+            already_visited.append(node.right)
+    
 
 
 def graph_depth_first_recursive(node: GraphNode, visited=None) -> None:
     if visited is None:
         visited = set()
     # Your code goes here
+    visited.add(node)
+    print(node.value)
+    for neighbour in node.adjacent:
+        if neighbour not in visited:
+            graph_depth_first_recursive(neighbour, visited)
 
 
 def graph_depth_first_iterative(node: GraphNode) -> None:
-    pass
+    visited = []	
+    visited.append(node)
+    
+    setNode = set()
+    setNode.add(node)
 
+    while len(visited) != 0:
+        node2 = visited.pop()
+        print(node2.value)
+        
+        for neighbour in node2.adjacent:
+            if neighbour not in setNode:
+                setNode.add(neighbour)
+                visited.append(neighbour)
+    
+    
 
 def graph_breadth_first(node: GraphNode) -> None:
-    pass
+
+    route = [node]
+    already_visited = set()
+    already_visited.add(node)
+    
+    while len(route)>0:
+        node = route.pop(0)
+
+        print(node.value)
+
+        for neighbours in node.adjacent:
+            if neighbours not in already_visited:
+                route.append(neighbours)
+                already_visited.add(neighbours)
+
+    

@@ -1,3 +1,6 @@
+from pickle import NONE
+
+
 def print_indices_and_elements(elements) -> None:
     for count, element in enumerate(elements):
         print(count,element)
@@ -28,39 +31,62 @@ def str_lengths(strings: list[str]) -> list[int]:
     return [len(i) for i in strings]
 
 def get_fibonacci_type(version: int) -> str:
-    return ''
+    if version == 1:
+        return 'generator'
+    elif version == 2:
+        return 'list'
 
 def difference_between_fibonacci1_and_fibonacci2() -> str:
-    return ''
+    return 'The Generator version is more efficient as it does not to store all the values in memory, On the other hand, in the list version, can be accessed in the memory and even reused.'
+
 
 
 class SkipIterator:
     def __init__(self, elements):
         self.elements = elements
         # You can add more code here if you need
+        self.iter = 0
+    
+    def __iter__(self):
+        return self
 
+    def __next__(self):
+        if self.iter >= len(self.elements):
+            raise StopIteration
+        else:
+            self.iter += 2
+            return self.elements[self.iter-2]
 
 def my_avg(e1: float, e2: float, *others: tuple[float]) -> float:
-    return -1
+    return (e1+e2+sum(others))/(2+len(others))
 
 
 def keys_with_different_value() -> list[int]:
-    return []
+    a = dict(zip(range(10), range(10)))
+    b = dict(zip(range(5, 15), range(15, 25)))
+    c = {**a, **b}
+    d = {**b, **a}
+    
+    return sorted([k for k, vc in c.items() if vc != d[k]])
 
 
 def print_out_in(*numbers) -> None:
+
     while len(numbers) > 1:
-        # You should add code here and remove the break
-        break
+        a = numbers[0], numbers[-1]
+        b,c = a
+        print(b, c)
+        numbers = numbers[1:-1]
 
     if numbers:
-        # You should add code here
-        pass
+        print(numbers[0])
+       
 
 
-def append_range(start: int, end: int, step: int=1, to: list[int]=[]):
+def append_range(start: int, end: int, step: int=1, to = None) -> list[int]:
     # You may add code here
-
+    if to is None:
+        to = []
     # Don't change the code below
     for i in range(start, end, step):
         to.append(i)
@@ -75,10 +101,11 @@ def global_var_func1(n: int):
 
 
 def global_var_func2(n: int):
+    global global_var
     for i in range(n):
         global_var += i
         print(global_var)
 
 
-def value_is_None(value):
-    return value == None
+def value_is_None(value) -> bool:
+    return value is None
