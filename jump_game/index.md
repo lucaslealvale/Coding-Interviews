@@ -57,15 +57,15 @@ The steps to solve with this approach are:
     3. Add all the possible jumps to the queue.
     4. Increment the number of jumps.
 
-### Solution 2: Greedy Algorithm (leetcode Optimal Solution)
-`Time Complexity: O(n)`
-`Space Complexity: O(1)`
-This solution is based on the fact that we can always reach the last index.
-The steps to solve with this approach are:
-1. Create three variables to store the current maximum index we can reach, to store the next maximum and one for the number of jumps.
-2. Iterate over the array.
-3. If the current index is greater than the next maximum, update the next maximum and increment the number of jumps.
-4. Return the number of jumps.
+### Solution 2: Greedy Algorithm (leetcode Optimal Solution)  
+`Time Complexity: O(n)`  
+`Space Complexity: O(1)`  
+This solution is based on the fact that we can always reach the last index.  
+The steps to solve with this approach are:  
+1. Create three variables to store the current maximum index we can reach, to store the next maximum and one for the number of jumps.  
+2. Iterate over the array.  
+3. If the current index is greater than the next maximum, update the next maximum and increment the number of jumps.  
+4. Return the number of jumps.  
 
-### Solution 3: Dynamic Programming extra challenge
-Having implemented the two previous solutions, can you implement this one?
+### Solution 3: Dynamic Programming extra challenge  
+Having implemented the two previous solutions, can you implement this one?  
