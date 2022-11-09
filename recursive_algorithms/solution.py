@@ -54,28 +54,27 @@ class LinkedList:
 
 # Implement the functions below
 
-def list_sum(l: list[int]) -> int:
+def list_sum(l):
     if(len(l) == 0):
         return 0
     return l[0] + list_sum(l[1:])
 
 
 
-def digit_sum(n: int) -> int:
-    #sum of digits of a number
+def digit_sum(n):
     if(n == 0):
         return 0
 
     return n%10 + digit_sum(n//10)
 
-def tree_sum(root: TreeNode) -> int:
+def tree_sum(root: TreeNode):
     if(root == None):
         return 0
     return root.value + tree_sum(root.left) + tree_sum(root.right)
     
 
 
-def tree_max(root: TreeNode, ) -> int:
+def tree_max(root: TreeNode ):
 
     if(root.left == None and root.right == None):
         return root.value
@@ -86,11 +85,11 @@ def k_combinations(l: list[int], k: int) -> list[list[int]]:
     return []
 
 
-def all_strictly_increasing_sequences(k: int, n: int, **kwargs) -> list[list[int]]:
+def all_strictly_increasing_sequences(k, n, **kwargs):
     return []
 
 
-def create_pattern(n: int) -> list[int]:
+def create_pattern(n):
     return []
 
 
@@ -99,7 +98,7 @@ def find_middle(head: LinkedListNode) -> LinkedListNode:
     return find_middle_rec(head)[1]
 
 
-def find_middle_rec(head: LinkedListNode, n: int=0) -> tuple[int, LinkedListNode]:
+def find_middle_rec(head: LinkedListNode, n: int=0):
     # Hint: n will be used to count nodes from left to right and
     # the number returned by the function will be used to count the nodes from right to left
     # TODO: Implement this function
