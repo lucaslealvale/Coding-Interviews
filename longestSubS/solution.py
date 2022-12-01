@@ -13,8 +13,7 @@ class Solution:
                 if count < len(s):
                     i = s[count]
                 else:
-                    break
-                
+                    break        
         return sub
     
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -28,4 +27,21 @@ class Solution:
                 
         return len(subs)
     
+    def lengthOfLongSub(count,s):
+        
+        sub = ""
+        if count < len(s):
+            i = s[count]
+        
+            while(i not in sub):
+                sub += i
+                count +=1
+
+                if count < len(s):
+                    i = s[count]
+                else:
+                    break
+        return sub
+
 print(Solution().lengthOfLongestSubstring("dvdf"))
+
