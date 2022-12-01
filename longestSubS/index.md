@@ -71,3 +71,20 @@ Implement any of the solutions in Python and submit it here. Your function must 
     def one_edit_away(first: str, second: str) -> bool:
         pass
 ```
+### Most Common mistakes
+During the interviews the most common mistakes were:  
+1. Understanding of the problem, sometimes people would just start coding and not actually simulating first. As an attempt to solve fast.  
+2. Missing the fixes for edge cases in their final solution.  
+3. Not finding the proper structure to save the necessary data.  
+
+### General Problems
+1. People would find the intuitive brute force solution pretty fast, but would not try to optimize it. Just a single interviewee went for a fast O(n) solution.  
+
+### Identifying positive and negative points in interviewees
+First I would like to point out that also by interviewing multiple times I got better in explaining the problem so as I mentioned before sometimes people would not simulate enough so that they would get a proper understanding of what the problem actually was. Second, as interviews came by it was clear that everyone could make the O(n^2) solution but not everyone was able or even intended to make it better.    
+Also people that took longer to find the O(n^2) solution intended to stop in that solution, while people that found it fast would accept the challenge to find a more optimal solution.  
+
+### What called my attention
+The things that called my attention were:  
+1. A divergent solution which iterated 0-n and also n-0, that implementation was completely disruptive and also looked good in time and space complexity. But when simulating it ends up failing with a specific set of inputs.  
+2. How fast some people are in changing their approach when intrigued to find a more optimal solution. I thought that people would just give up after finding a good solution. But some of them actually tried to find the very best taking up to 50 minutes in that search. Some actually found it.  
